@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import LetsEat from "../../assets/LetsEat.png";
 // import budgettracker from "../../assets/budgettracker.png";
 // import DayPlanner from "../../assets/DayPlanner.png";
-import LetsEat from "../../assets/LetsEat.png";
 // import PasswordGenerator from "../../assets/PasswordGenerator.png";
 // import PetProject from "../../assets/PetProject.png";
 // import TechBlog from "../../assets/TechBlog.png";
@@ -19,24 +19,16 @@ function Portfolio() {
         <hr />
         <div className="row">
           <div className="col-lg-4 py-2">
-            <Card style={{ width: "20rem" }}>
-              <Card.Img
-                variant="top"
-                src={LetsEat}
-                alt="Let's Eat"
-                style={{ width: "318px", height: "210px" }}
-              />
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={LetsEat} alt="Let's Eat" />
               <Card.Body>
                 <Card.Title>Let's Eat</Card.Title>
                 <Card.Text>
-                  This is an app that returns an instant restaurant suggestion
-                  result based on the user &apos s location, whether by zipcode,
-                  neighborhood, or address. Its goal is to streamline the
-                  restaurant decision-making process by generating only one
-                  restaurant at random. This app was created in response to the
-                  overwhelming choices people face each day, in fulfillment of
-                  Columbia University &apos s Coding Engineering Bootcamp,
-                  Project 1.
+                  This is an app created in response to the overwhelming choices
+                  people face each day that returns an instant restaurant
+                  suggestion result based on the user location. Its goal is to
+                  streamline the restaurant decision-making process by
+                  generating only one restaurant at random.
                 </Card.Text>
                 <Card.Link
                   href="https://a-breezy.github.io/LetsEat/"

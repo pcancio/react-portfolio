@@ -10,6 +10,7 @@ function Navigation() {
           <Nav className="me-auto">
             <Nav.Link href="#about-me">About Me</Nav.Link>
             <Nav.Link href="#my-portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="#my-resume">Resume</Nav.Link>
             <Nav.Link href="#contact-me">Contact Me</Nav.Link>
           </Nav>
         </Container>

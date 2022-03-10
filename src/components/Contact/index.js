@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
+import SocialFollow from "../SocialFollow";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -35,13 +36,13 @@ const Contact = () => {
     if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage("Please enter a valid email.");
+        setErrorMessage("Please enter a valid email!");
       } else {
         setErrorMessage("");
       }
     } else {
       if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
+        setErrorMessage("Please enter your name!");
       } else {
         setErrorMessage("");
       }
@@ -54,14 +55,16 @@ const Contact = () => {
         <div className="d-flex row">
           <div className="align-items-baseline col-lg-12 text-primary">
             <h1 className="display-4 text-center text-lg-left">Contact Me</h1>
+            <p>
+              <SocialFollow />
+            </p>
           </div>
         </div>
         <hr />
         <section className="mb-4">
-          <p className="text-center w-responsive mx-auto mb-5">
-            Leave me a note!
+          <p className="text-center text-md-left w-responsive mx-auto mb-5">
+            Leave me a note!{" "}
           </p>
-
           <div className="row">
             <div className="col-md-9 mb-md-0 mb-5">
               <form
@@ -104,6 +107,14 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+                <span className="text-danger">
+                  {" "}
+                  {errorMessage && (
+                    <div>
+                      <p className="error-text">{errorMessage}</p>
+                    </div>
+                  )}
+                </span>
 
                 <div className="row">
                   <div className="col-md-12">
@@ -138,11 +149,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                {errorMessage && (
-                  <div>
-                    <p className="error-text">{errorMessage}</p>
-                  </div>
-                )}
+
                 <button className="btn btn-primary" type="submit">
                   Send
                 </button>

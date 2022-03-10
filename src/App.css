@@ -39,13 +39,14 @@
 
 .social-container {
   background: #eee;
-  padding: 25px 50px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: center;
 }
 
 a.social {
   margin: 0 1rem;
   transition: transform 250ms;
-  display: inline-block;
 }
 
 a.social:hover {

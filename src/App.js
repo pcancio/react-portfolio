@@ -1,10 +1,10 @@
 import React from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import SocialFollow from "./components/SocialFollow";
+// import SocialFollow from "./components/SocialFollow";
 import Navigation from "./components/Navigation";
 import Portfolio from "./components/Portfolio";
-// import Project from "./components/Project";
+import Footer from "./components/Footer";
 import Resume from "./components/Resume";
 
 import "./App.css";
@@ -19,10 +19,9 @@ function App() {
         <Resume />
         <Contact />
       </main>
-      <footer>
-        <SocialFollow />
-        Patricia Cancio 2022
-      </footer>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

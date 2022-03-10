@@ -9,7 +9,7 @@ import TechBlog from "../../assets/TechBlog.png";
 
 function Portfolio() {
   return (
-    <div id="my-portfolio" className="content my-5">
+    <div id="my-portfolio" className="content my-5 ">
       <div className="container my-3 p-3 border border border-primary bg-light">
         <div className="d-flex row">
           <div className="align-items-baseline col-lg-12 text-primary">
@@ -17,9 +17,9 @@ function Portfolio() {
           </div>
         </div>
         <hr />
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={LetsEat} alt="Let's Eat" />
               <Card.Body>
                 <Card.Title>Let's Eat</Card.Title>
@@ -47,9 +47,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={PetProject} alt="Pet Project" />
               <Card.Body>
                 <Card.Title>Pet Project</Card.Title>
@@ -76,9 +76,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
                 src={budgettracker}
@@ -109,9 +109,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
                 src={DayPlanner}
@@ -143,9 +143,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
                 src={PasswordGenerator}
@@ -177,9 +177,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-lg-4 py-2">
-            <Card style={{ width: "18rem" }}>
+        <div className="row justify-content-center portfolio">
+          <div className="col-12 col-md-6 col-lg-3 m-2">
+            <Card border="primary" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={TechBlog} alt="Tech Blog" />
               <Card.Body>
                 <Card.Title>Tech Blog</Card.Title>

@@ -3,7 +3,7 @@ import headshot from "../../assets/headshot.png";
 
 function About() {
   return (
-    <div className="content my-5">
+    <div id="about-me" className="content my-5">
       <div className="container my-3 p-3 border border border-primary bg-light">
         <div className="d-flex row">
           <div className="align-items-baseline col-lg-12 text-primary">

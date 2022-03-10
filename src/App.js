@@ -1,7 +1,6 @@
 import React from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
-// import SocialFollow from "./components/SocialFollow";
 import Navigation from "./components/Navigation";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";

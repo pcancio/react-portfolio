@@ -1,6 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { validateEmail } from "../../utils/helpers";
 
-function Contact() {
+const Contact = () => {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errorMessage, setErrorMessage] = useState("");
+  const { name, email, subject, message } = formState;
+
+  const submit = (e) => {
+    e.preventDefault();
+    if (
+      validateEmail(e.target.email.value) &&
+      e.target.name.value &&
+      e.target.subject.value &&
+      e.target.message.value
+    ) {
+      console.log(
+        e.target.name.value,
+        e.target.email.value,
+        e.target.subject.value,
+        e.target.message.value
+      );
+      setFormState({ name: "", email: "", subject: "", message: "" });
+      console.log("Form", formState);
+      document.querySelector(".contact-form").reset();
+    }
+  };
+
+  const handleCharge = (e) => {
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      if (!isValid) {
+        setErrorMessage("Please enter a valid email.");
+      } else {
+        setErrorMessage("");
+      }
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage("");
+      }
+    }
+  };
+
   return (
     <div id="contact-me" className="content my-5">
       <div className="container my-3 p-3 border border border-primary bg-light">
@@ -21,7 +68,8 @@ function Contact() {
                 id="contact-form"
                 name="contact-form"
                 action="mail.php"
-                method="POST" /*ref="form" onSubmit={this.handleSubmit}*/
+                method="POST"
+                onSubmit={submit}
               >
                 <div className="row">
                   <div className="col-md-6">
@@ -31,6 +79,8 @@ function Contact() {
                         id="name"
                         name="name"
                         className="form-control"
+                        onChange={handleCharge}
+                        defaultValue={name}
                       />
                       <label for="name" className="">
                         name
@@ -45,6 +95,8 @@ function Contact() {
                         id="email"
                         name="email"
                         className="form-control"
+                        onChange={handleCharge}
+                        defaultValue={email}
                       />
                       <label for="email" className="">
                         email
@@ -61,6 +113,8 @@ function Contact() {
                         id="subject"
                         name="subject"
                         className="form-control"
+                        onChange={handleCharge}
+                        defaultValue={subject}
                       />
                       <label for="subject" className="">
                         subject
@@ -77,11 +131,18 @@ function Contact() {
                         name="message"
                         rows="2"
                         className="form-control md-textarea"
+                        onChange={handleCharge}
+                        defaultValue={message}
                       ></textarea>
                       <label for="message">message</label>
                     </div>
                   </div>
                 </div>
+                {errorMessage && (
+                  <div>
+                    <p className="error-text">{errorMessage}</p>
+                  </div>
+                )}
                 <button className="btn btn-primary" type="submit">
                   Send
                 </button>
@@ -92,6 +153,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
